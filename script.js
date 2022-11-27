@@ -68,49 +68,49 @@ function random_bg_color(){
 }
 random_bg_color();
 
-var daysSpan = document.querySelector('.days');
-var hoursSpan = document.querySelector('.hours');
-var minutesSpan = document.querySelector('.minutes');
-var secondsSpan = document.querySelector('.seconds');
-timer();
-setInterval(timer, 1000);
+// var daysSpan = document.querySelector('.days');
+// var hoursSpan = document.querySelector('.hours');
+// var minutesSpan = document.querySelector('.minutes');
+// var secondsSpan = document.querySelector('.seconds');
+// timer();
+// setInterval(timer, 1000);
 
-function timer() {
-	var now = new Date();
-	var target = new Date(
-		now.getFullYear() + 1,
-		0,
-		1,
-		0,
-		0,
-		0
-	);
+// function timer() {
+// 	var now = new Date();
+// 	var target = new Date(
+// 		now.getFullYear() + 1,
+// 		0,
+// 		1,
+// 		0,
+// 		0,
+// 		0
+// 	);
 	
-	var diff = Math.ceil((target - now) / 1000);
+// 	var diff = Math.ceil((target - now) / 1000);
 	
-	var days = extract(diff, 60 * 60 * 24);
-	var hours = extract(days.diff, 60 * 60);
-	var minutes = extract(hours.diff, 60);
-	var seconds = extract(minutes.diff, 1);
+// 	var days = extract(diff, 60 * 60 * 24);
+// 	var hours = extract(days.diff, 60 * 60);
+// 	var minutes = extract(hours.diff, 60);
+// 	var seconds = extract(minutes.diff, 1);
 	
-    daysSpan.innerHTML = days.value;
-    hoursSpan.innerHTML = (hours.value);
-    minutesSpan.innerHTML = (minutes.value);
-    secondsSpan.innerHTML = (seconds.value);
+//     daysSpan.innerHTML = days.value;
+//     hoursSpan.innerHTML = (hours.value);
+//     minutesSpan.innerHTML = (minutes.value);
+//     secondsSpan.innerHTML = (seconds.value);
 
-}
+// }
 
-function extract(diff, formula) {
-	var value = Math.floor(diff / formula);
-	var diff = diff % formula;
+// function extract(diff, formula) {
+// 	var value = Math.floor(diff / formula);
+// 	var diff = diff % formula;
 	
-	return {value: value, diff: diff};
-}
+// 	return {value: value, diff: diff};
+// }
 
-function addZero(num) {
-	if (num <= 9) {
-		num = '0' + num;
-	}
+// function addZero(num) {
+// 	if (num <= 9) {
+// 		num = '0' + num;
+// 	}
 	
-	return num;
-}
+// 	return num;
+// }
